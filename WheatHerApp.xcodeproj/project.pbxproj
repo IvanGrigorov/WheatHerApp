@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F4B617F1E0EC7BA00D6C0E2 /* PAbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B617E1E0EC7BA00D6C0E2 /* PAbstractModel.swift */; };
+		3F4B61811E10340700D6C0E2 /* JSONDeliverer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B61801E10340700D6C0E2 /* JSONDeliverer.swift */; };
 		3FEC866A1E05C61500C2886F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86691E05C61500C2886F /* AppDelegate.swift */; };
 		3FEC866C1E05C61500C2886F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC866B1E05C61500C2886F /* ViewController.swift */; };
 		3FEC866F1E05C61500C2886F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC866D1E05C61500C2886F /* Main.storyboard */; };
@@ -15,6 +17,12 @@
 		3FEC86771E05C61500C2886F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC86751E05C61500C2886F /* LaunchScreen.storyboard */; };
 		3FEC86821E05C61600C2886F /* WheatHerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86811E05C61600C2886F /* WheatHerAppTests.swift */; };
 		3FEC868D1E05C61600C2886F /* WheatHerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC868C1E05C61600C2886F /* WheatHerAppUITests.swift */; };
+		3FEC86A61E05E8EE00C2886F /* WeekDaysEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86A51E05E8EE00C2886F /* WeekDaysEnum.swift */; };
+		3FEC86A81E05F51200C2886F /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86A71E05F51200C2886F /* FirstScreenView.swift */; };
+		3FEC86AA1E07FD3400C2886F /* Park-icon-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC86A91E07FD3400C2886F /* Park-icon-20.png */; };
+		3FEC86B01E095B6100C2886F /* WhetherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC86AF1E095B6100C2886F /* WhetherData.json */; };
+		3FEC86B51E09613100C2886F /* MappingDataJSONToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86B41E09613100C2886F /* MappingDataJSONToModel.swift */; };
+		3FEC86B71E09B68100C2886F /* JSONCustomParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86B61E09B68100C2886F /* JSONCustomParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F4B617E1E0EC7BA00D6C0E2 /* PAbstractModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PAbstractModel.swift; sourceTree = "<group>"; };
+		3F4B61801E10340700D6C0E2 /* JSONDeliverer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDeliverer.swift; sourceTree = "<group>"; };
 		3FEC86661E05C61500C2886F /* WheatHerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheatHerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEC86691E05C61500C2886F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FEC866B1E05C61500C2886F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +59,12 @@
 		3FEC86881E05C61600C2886F /* WheatHerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheatHerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEC868C1E05C61600C2886F /* WheatHerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatHerAppUITests.swift; sourceTree = "<group>"; };
 		3FEC868E1E05C61600C2886F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FEC86A51E05E8EE00C2886F /* WeekDaysEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekDaysEnum.swift; sourceTree = "<group>"; };
+		3FEC86A71E05F51200C2886F /* FirstScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
+		3FEC86A91E07FD3400C2886F /* Park-icon-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Park-icon-20.png"; path = "../../../Downloads/ParksPicker - First/ParksPicker/Assets.xcassets/AppIcon.appiconset/Park-icon-20.png"; sourceTree = "<group>"; };
+		3FEC86AF1E095B6100C2886F /* WhetherData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WhetherData.json; sourceTree = "<group>"; };
+		3FEC86B41E09613100C2886F /* MappingDataJSONToModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingDataJSONToModel.swift; sourceTree = "<group>"; };
+		3FEC86B61E09B68100C2886F /* JSONCustomParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCustomParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +115,16 @@
 		3FEC86681E05C61500C2886F /* WheatHerApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FEC86B21E09606600C2886F /* CoreLogic  */,
+				3FEC86AC1E094FB400C2886F /* Data */,
+				3FEC86A41E05E8D500C2886F /* Enums */,
+				3FEC86A31E05E84700C2886F /* Views */,
+				3FEC869E1E05E7C200C2886F /* Models */,
+				3FEC869B1E05E79400C2886F /* Controllers */,
 				3FEC86691E05C61500C2886F /* AppDelegate.swift */,
 				3FEC866B1E05C61500C2886F /* ViewController.swift */,
 				3FEC866D1E05C61500C2886F /* Main.storyboard */,
+				3FEC86A91E07FD3400C2886F /* Park-icon-20.png */,
 				3FEC86731E05C61500C2886F /* Assets.xcassets */,
 				3FEC86751E05C61500C2886F /* LaunchScreen.storyboard */,
 				3FEC86781E05C61500C2886F /* Info.plist */,
@@ -126,6 +149,55 @@
 				3FEC868E1E05C61600C2886F /* Info.plist */,
 			);
 			path = WheatHerAppUITests;
+			sourceTree = "<group>";
+		};
+		3FEC869B1E05E79400C2886F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3FEC869E1E05E7C200C2886F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F4B617E1E0EC7BA00D6C0E2 /* PAbstractModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3FEC86A31E05E84700C2886F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FEC86A71E05F51200C2886F /* FirstScreenView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3FEC86A41E05E8D500C2886F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				3FEC86A51E05E8EE00C2886F /* WeekDaysEnum.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
+		3FEC86AC1E094FB400C2886F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3FEC86AF1E095B6100C2886F /* WhetherData.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		3FEC86B21E09606600C2886F /* CoreLogic  */ = {
+			isa = PBXGroup;
+			children = (
+				3FEC86B41E09613100C2886F /* MappingDataJSONToModel.swift */,
+				3FEC86B61E09B68100C2886F /* JSONCustomParser.swift */,
+				3F4B61801E10340700D6C0E2 /* JSONDeliverer.swift */,
+			);
+			name = "CoreLogic ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +308,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FEC86771E05C61500C2886F /* LaunchScreen.storyboard in Resources */,
+				3FEC86B01E095B6100C2886F /* WhetherData.json in Resources */,
 				3FEC86741E05C61500C2886F /* Assets.xcassets in Resources */,
+				3FEC86AA1E07FD3400C2886F /* Park-icon-20.png in Resources */,
 				3FEC866F1E05C61500C2886F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,9 +336,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4B61811E10340700D6C0E2 /* JSONDeliverer.swift in Sources */,
 				3FEC866C1E05C61500C2886F /* ViewController.swift in Sources */,
 				3FEC86721E05C61500C2886F /* WheatHerApp.xcdatamodeld in Sources */,
 				3FEC866A1E05C61500C2886F /* AppDelegate.swift in Sources */,
+				3FEC86B51E09613100C2886F /* MappingDataJSONToModel.swift in Sources */,
+				3F4B617F1E0EC7BA00D6C0E2 /* PAbstractModel.swift in Sources */,
+				3FEC86A81E05F51200C2886F /* FirstScreenView.swift in Sources */,
+				3FEC86A61E05E8EE00C2886F /* WeekDaysEnum.swift in Sources */,
+				3FEC86B71E09B68100C2886F /* JSONCustomParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +589,7 @@
 				3FEC86931E05C61600C2886F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FEC86941E05C61600C2886F /* Build configuration list for PBXNativeTarget "WheatHerAppTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +598,7 @@
 				3FEC86961E05C61600C2886F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FEC86971E05C61600C2886F /* Build configuration list for PBXNativeTarget "WheatHerAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +607,7 @@
 				3FEC86991E05C61600C2886F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
