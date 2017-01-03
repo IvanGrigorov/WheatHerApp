@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,7 +31,7 @@
         <!--Item 1-->
         <scene sceneID="9xb-ro-7v4">
             <objects>
-                <viewController id="dlK-mJ-dc9" sceneMemberID="viewController">
+                <viewController id="dlK-mJ-dc9" customClass="WeatherController" customModule="WheatHerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eGU-f5-rdC"/>
                         <viewControllerLayoutGuide type="bottom" id="xbR-SA-fHV"/>
@@ -41,48 +40,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Park-icon-20.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ctg-OQ-nqd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Park-icon-20.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ctg-OQ-nqd">
                                 <rect key="frame" x="16" y="40" width="343" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="GlM-6D-bDw"/>
-                                    <constraint firstAttribute="height" constant="170" id="XZO-5G-cjn"/>
-                                    <constraint firstAttribute="width" constant="343" id="uhm-gp-g32"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mc-ee-h3I">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4mc-ee-h3I">
                                 <rect key="frame" x="0.0" y="-6" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="CFV-lC-O4N"/>
-                                    <constraint firstAttribute="height" constant="44" id="IQl-iS-tD9"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Title" id="Koh-Z9-Wv0"/>
-                                </items>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcx-vl-OR3">
-                                <rect key="frame" x="133" y="180" width="112" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="1B7-wy-hrg"/>
-                                    <constraint firstAttribute="width" constant="112" id="oMX-8Z-4bl"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Label">
-                                        <attributes>
-                                            <font key="NSFont" size="25" name="Arial-BoldMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4oL-AD-Ic5">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4oL-AD-Ic5">
                                 <rect key="frame" x="16" y="218" width="343" height="392"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="X4G-af-1gJ"/>
-                                    <constraint firstAttribute="height" constant="392" id="cfB-rl-d7c"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="kZh-Xk-tHG"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DmE-yk-85Y">
                                     <size key="itemSize" width="157" height="117"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -90,7 +59,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ayd-7i-ZHZ">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="1" id="ayd-7i-ZHZ">
                                         <rect key="frame" x="0.0" y="0.0" width="157" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -98,7 +67,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ox6-JK-lrt">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="2" id="Ox6-JK-lrt">
                                         <rect key="frame" x="186" y="0.0" width="157" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -106,7 +75,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1Y9-tf-cBm">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="3" reuseIdentifier="3" id="1Y9-tf-cBm">
                                         <rect key="frame" x="0.0" y="127" width="157" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -114,7 +83,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="r57-n0-BmY">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="4" id="r57-n0-BmY">
                                         <rect key="frame" x="186" y="127" width="157" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -122,7 +91,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="m4A-CP-1WW">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="5" id="m4A-CP-1WW">
                                         <rect key="frame" x="0.0" y="254" width="157" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -130,7 +99,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NsZ-70-ZJq">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="6" id="NsZ-70-ZJq">
                                         <rect key="frame" x="186" y="254" width="157" height="117"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -142,30 +111,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="Ctg-OQ-nqd" secondAttribute="leading" id="3ns-Hc-niI"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Ctg-OQ-nqd" secondAttribute="leading" id="AYW-an-vvg"/>
-                            <constraint firstItem="4mc-ee-h3I" firstAttribute="leading" secondItem="Ctg-OQ-nqd" secondAttribute="trailing" constant="-359" id="Aid-Eh-Kyv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4oL-AD-Ic5" secondAttribute="trailing" id="B6p-wx-OUb"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="4oL-AD-Ic5" secondAttribute="leading" id="InJ-tp-GtI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4oL-AD-Ic5" secondAttribute="trailing" id="RaY-KR-5oA"/>
-                            <constraint firstItem="Ctg-OQ-nqd" firstAttribute="top" secondItem="4mc-ee-h3I" secondAttribute="bottom" constant="2" id="YMz-dz-kIa"/>
-                            <constraint firstItem="Bcx-vl-OR3" firstAttribute="leading" secondItem="Ctg-OQ-nqd" secondAttribute="trailing" constant="-226" id="ddT-T8-uwX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ctg-OQ-nqd" secondAttribute="trailing" id="iIi-rP-PWT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ctg-OQ-nqd" secondAttribute="trailing" id="kH2-mf-vHZ"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="4oL-AD-Ic5" secondAttribute="leading" id="lSU-jD-UCD"/>
-                            <constraint firstItem="Ctg-OQ-nqd" firstAttribute="top" secondItem="4mc-ee-h3I" secondAttribute="bottom" constant="2" id="nvH-6F-XYa"/>
-                            <constraint firstItem="xbR-SA-fHV" firstAttribute="top" secondItem="Ctg-OQ-nqd" secondAttribute="bottom" constant="408" id="ode-CZ-Vyu"/>
-                            <constraint firstItem="4oL-AD-Ic5" firstAttribute="top" secondItem="eGU-f5-rdC" secondAttribute="bottom" constant="198" id="p5A-He-v1i"/>
-                            <constraint firstItem="Bcx-vl-OR3" firstAttribute="top" secondItem="Ctg-OQ-nqd" secondAttribute="bottom" constant="-30" id="qq1-oN-P7T"/>
-                            <constraint firstItem="xbR-SA-fHV" firstAttribute="top" secondItem="Ctg-OQ-nqd" secondAttribute="bottom" constant="408" id="skF-DM-kVr"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="ecN-dX-2cI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUS-Hh-gUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684" y="-520.38980509745136"/>
+            <point key="canvasLocation" x="721" y="-679"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Z8H-4q-zn0">
@@ -183,7 +134,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDY-HK-2yt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="77"/>
+            <point key="canvasLocation" x="530" y="96"/>
         </scene>
     </scenes>
     <resources>
