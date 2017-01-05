@@ -26,6 +26,7 @@
 		3FEC86B01E095B6100C2886F /* WhetherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC86AF1E095B6100C2886F /* WhetherData.json */; };
 		3FEC86B51E09613100C2886F /* MappingDataJSONToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86B41E09613100C2886F /* MappingDataJSONToModel.swift */; };
 		3FEC86B71E09B68100C2886F /* JSONCustomParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86B61E09B68100C2886F /* JSONCustomParser.swift */; };
+		3FFBE9A11E1C0CE0009373BA /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		3FEC86AF1E095B6100C2886F /* WhetherData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WhetherData.json; path = WheatHerApp/WhetherData.json; sourceTree = SOURCE_ROOT; };
 		3FEC86B41E09613100C2886F /* MappingDataJSONToModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingDataJSONToModel.swift; sourceTree = "<group>"; };
 		3FEC86B61E09B68100C2886F /* JSONCustomParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCustomParser.swift; sourceTree = "<group>"; };
+		3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		3FEC869B1E05E79400C2886F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */,
 				3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */,
 			);
 			name = Controllers;
@@ -345,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFBE9A11E1C0CE0009373BA /* CustomTableViewController.swift in Sources */,
 				3F4B61811E10340700D6C0E2 /* JSONDeliverer.swift in Sources */,
 				3FEC866C1E05C61500C2886F /* ViewController.swift in Sources */,
 				3FE2F5A71E19BDCA005F1B2C /* WeatherController.swift in Sources */,

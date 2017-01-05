@@ -10,8 +10,8 @@ import Foundation
 
 protocol PMappingDataJSONToModel {
     
-
-    static var rowJSON : Data? {get set}
+    var parsedJSON : PAbstractModel? {get set}
+    var rowJSON : Data? {get set}
     //var json : Array<AnyObject>? {get set}
     //init()
     func parseJSONToObject(modelType: String ) -> Void

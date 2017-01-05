@@ -24,9 +24,9 @@ final class JSONCustomPaser : PMappingDataJSONToModel {
     
     
     
-    static var rowJSON: Data?
+    var rowJSON: Data?
     
-    private(set) var parsedJSON : PAbstractModel?
+    var parsedJSON : PAbstractModel?
     
     // Parse the incomming Json to coresponding Model 
     func parseJSONToObject(modelType: String) -> Void {
@@ -44,15 +44,15 @@ final class JSONCustomPaser : PMappingDataJSONToModel {
 
 
 
-    private func parseWhetherJSON() -> PAbstractModel {
-        var parsedJSON : Dictionary<String, Any>?
+    private func parseWhetherJSON() -> WeatherModel {
+        var tmpParsedJSON : Dictionary<String, Any>?
         do {
-             parsedJSON = try JSONSerialization.jsonObject(with: JSONCustomPaser.rowJSON!, options: JSONSerialization.ReadingOptions.mutableContainers) as? Dictionary<String, AnyObject>
+             tmpParsedJSON = try JSONSerialization.jsonObject(with: self.rowJSON!, options: JSONSerialization.ReadingOptions.mutableContainers) as? Dictionary<String, AnyObject>
         }
         catch {
             fatalError("Invalid json input. ")
         }
-        guard let unwrappedParsedJSON = parsedJSON else  {
+        guard let unwrappedParsedJSON = tmpParsedJSON else  {
             fatalError("Invalid JSON Structue.  ")
         }
         
