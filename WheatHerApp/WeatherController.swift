@@ -57,15 +57,16 @@ class WeatherController :  ViewController
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var jsonParser = JSONCustomPaser.getInstance()
-        jsonParser.rowJSON = JSONDeliverer.deliverJSONFromFile(filePath: "WhetherData")
-        jsonParser.parseJSONToObject(modelType: "WeatherModel")
+        //var jsonParser = JSONCustomPaser.getInstance()
+        //jsonParser.rowJSON = JSONDeliverer.deliverJSONFromFile(filePath: "WhetherData")
+        //jsonParser.parseJSONToObject(modelType: "WeatherModel")
         
     
         self.customAtmosphere = self.weather!.atmosphere
         self.customLocation = self.weather!.location
         self.customWind = self.weather!.wind
         self.image = self.weather!.imageURL
+        
 
         
         
@@ -83,12 +84,30 @@ class WeatherController :  ViewController
     }
     
     private func prepareDataForView() {
-        var jsonParser = JSONCustomPaser.getInstance()
-        jsonParser.rowJSON = JSONDeliverer.deliverJSONFromFile(filePath: "WhetherData")
-        jsonParser.parseJSONToObject(modelType: "WeatherModel")
-        self.weather = jsonParser.parsedJSON as? WeatherModel
-        self.dailyWeather  = self.weather!.forecast
+            self.starstDeliveringJSON()
+            var jsonParser = JSONCustomPaser.getInstance()
+            jsonParser.parseJSONToObject(modelType: "WeatherModel")
+            self.weather = jsonParser.parsedJSON as? WeatherModel
+            self.dailyWeather  = self.weather!.forecast
 
+    }
+    
+    private func starstDeliveringJSON() {
+        if CachedManager.getInstance().toCacheOrNotToCacheDelivery() {
+            return
+        }
+        var jsonParser = JSONCustomPaser.getInstance()
+        do {
+            try jsonParser.rowJSON = JSONDeliverer.deliverWebJSON()
+        }
+        catch NetworkDataErrors.TroubleGettingData(let message) {
+            let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        catch {
+            fatalError("Unexpected Error")
+        }
     }
     
 }
