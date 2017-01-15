@@ -22,9 +22,12 @@ public class CachedManager  {
     
     private  var cached : Double?
     private  var deliveryCache : Double?
-
+    private(set) var isInitialLaunch = true
+    
     
     public func toCacheOrNotToCache() -> Bool {
+        self.isInitialLaunch = false
+
         guard let unwrappedTime = cached else {
             self.cached = NSDate().timeIntervalSince1970
             return false

@@ -32,6 +32,7 @@ import UIKit
     
 
     // Currently not implemented
+    // Sync request
     static func deliverWebJSON() throws -> Data {
         let url = URL(string: URLRequestString)
         var result: Data?
@@ -61,5 +62,23 @@ import UIKit
                throw NetworkDataErrors.TroubleGettingData(errorMsg: "Cannot recieve Data")
         }
         return returnedData
+    }
+    
+    // Async Request
+    static func deliverWebJSONAsync( parser:  PMappingDataJSONToModel) throws -> Void {
+        var parser = parser
+        let url = URL(string: URLRequestString)
+        
+        
+        
+        // This is asynchroneous
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error)   in
+            guard let recieved = data else {
+                return
+            }
+            parser.rowJSON = recieved
+            
+        }
+        task.resume()
     }
 }

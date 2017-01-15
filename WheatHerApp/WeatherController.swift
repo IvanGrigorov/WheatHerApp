@@ -98,7 +98,14 @@ class WeatherController :  ViewController
         }
         var jsonParser = JSONCustomPaser.getInstance()
         do {
-            try jsonParser.rowJSON = JSONDeliverer.deliverWebJSON()
+            if CachedManager.getInstance().isInitialLaunch {
+                try jsonParser.rowJSON = JSONDeliverer.deliverWebJSON()
+            }
+        
+            else {
+                try JSONDeliverer.deliverWebJSONAsync(parser: jsonParser)
+                return
+            }
         }
         catch NetworkDataErrors.TroubleGettingData(let message) {
             let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
