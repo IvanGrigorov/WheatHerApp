@@ -12,11 +12,11 @@ class WeatherModel : PAbstractModel {
     
     internal var title: String
     internal var created: String
-    private var location: String
-    private var wind: String
-    private var atmosphere: String
-    private var imageURL: URL
-    private var forecast: [DailyWeatherModel]
+    private(set) var location: String
+    private(set) var wind: String
+    private(set) var atmosphere: String
+    private(set) var imageURL: URL
+    private(set) var forecast: [DailyWeatherModel]
     
     
     init(title: String, created: String, location: String, wind: String, atmosphere: String, imageURL: URL, forecast: [DailyWeatherModel]) {

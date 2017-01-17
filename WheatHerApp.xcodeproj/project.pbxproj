@@ -26,6 +26,9 @@
 		3FEC86B01E095B6100C2886F /* WhetherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC86AF1E095B6100C2886F /* WhetherData.json */; };
 		3FEC86B51E09613100C2886F /* MappingDataJSONToModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86B41E09613100C2886F /* MappingDataJSONToModel.swift */; };
 		3FEC86B71E09B68100C2886F /* JSONCustomParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86B61E09B68100C2886F /* JSONCustomParser.swift */; };
+		3FFBE9A11E1C0CE0009373BA /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */; };
+		3FFBE9A51E20F124009373BA /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBE9A41E20F124009373BA /* CacheManager.swift */; };
+		3FFBE9AA1E2A85DA009373BA /* NetowrkDataErors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBE9A91E2A85DA009373BA /* NetowrkDataErors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		3FEC86AF1E095B6100C2886F /* WhetherData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = WhetherData.json; path = WheatHerApp/WhetherData.json; sourceTree = SOURCE_ROOT; };
 		3FEC86B41E09613100C2886F /* MappingDataJSONToModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingDataJSONToModel.swift; sourceTree = "<group>"; };
 		3FEC86B61E09B68100C2886F /* JSONCustomParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCustomParser.swift; sourceTree = "<group>"; };
+		3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		3FFBE9A41E20F124009373BA /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		3FFBE9A91E2A85DA009373BA /* NetowrkDataErors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetowrkDataErors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,7 @@
 		3FEC865D1E05C61500C2886F = {
 			isa = PBXGroup;
 			children = (
-				3FEC86681E05C61500C2886F /* WheatHerApp */,
+				3FFBE9A71E2A85AF009373BA /* New Group */,
 				3FEC86801E05C61600C2886F /* WheatHerAppTests */,
 				3FEC868B1E05C61600C2886F /* WheatHerAppUITests */,
 				3FEC86671E05C61500C2886F /* Products */,
@@ -121,11 +127,12 @@
 		3FEC86681E05C61500C2886F /* WheatHerApp */ = {
 			isa = PBXGroup;
 			children = (
-				3FEC86B21E09606600C2886F /* CoreLogic  */,
+				3FFBE9A81E2A85B8009373BA /* Erors */,
+				3FEC86B21E09606600C2886F /* LogicModels */,
 				3FEC86AC1E094FB400C2886F /* Data */,
 				3FEC86A41E05E8D500C2886F /* Enums */,
 				3FEC86A31E05E84700C2886F /* Views */,
-				3FEC869E1E05E7C200C2886F /* Models */,
+				3FEC869E1E05E7C200C2886F /* DataModels */,
 				3FEC869B1E05E79400C2886F /* Controllers */,
 				3FEC86691E05C61500C2886F /* AppDelegate.swift */,
 				3FEC866B1E05C61500C2886F /* ViewController.swift */,
@@ -160,19 +167,20 @@
 		3FEC869B1E05E79400C2886F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */,
 				3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		3FEC869E1E05E7C200C2886F /* Models */ = {
+		3FEC869E1E05E7C200C2886F /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
 				3F4B617E1E0EC7BA00D6C0E2 /* PAbstractModel.swift */,
 				3F4B61821E12F7F300D6C0E2 /* WeatherModel.swift */,
 				3F4B61841E13251200D6C0E2 /* DailyWeatherModel.swift */,
 			);
-			name = Models;
+			name = DataModels;
 			sourceTree = "<group>";
 		};
 		3FEC86A31E05E84700C2886F /* Views */ = {
@@ -199,14 +207,31 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
-		3FEC86B21E09606600C2886F /* CoreLogic  */ = {
+		3FEC86B21E09606600C2886F /* LogicModels */ = {
 			isa = PBXGroup;
 			children = (
 				3FEC86B41E09613100C2886F /* MappingDataJSONToModel.swift */,
 				3FEC86B61E09B68100C2886F /* JSONCustomParser.swift */,
 				3F4B61801E10340700D6C0E2 /* JSONDeliverer.swift */,
+				3FFBE9A41E20F124009373BA /* CacheManager.swift */,
 			);
-			name = "CoreLogic ";
+			name = LogicModels;
+			sourceTree = "<group>";
+		};
+		3FFBE9A71E2A85AF009373BA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3FEC86681E05C61500C2886F /* WheatHerApp */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		3FFBE9A81E2A85B8009373BA /* Erors */ = {
+			isa = PBXGroup;
+			children = (
+				3FFBE9A91E2A85DA009373BA /* NetowrkDataErors.swift */,
+			);
+			name = Erors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,11 +370,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFBE9A11E1C0CE0009373BA /* CustomTableViewController.swift in Sources */,
 				3F4B61811E10340700D6C0E2 /* JSONDeliverer.swift in Sources */,
+				3FFBE9AA1E2A85DA009373BA /* NetowrkDataErors.swift in Sources */,
 				3FEC866C1E05C61500C2886F /* ViewController.swift in Sources */,
 				3FE2F5A71E19BDCA005F1B2C /* WeatherController.swift in Sources */,
 				3FEC86721E05C61500C2886F /* WheatHerApp.xcdatamodeld in Sources */,
 				3F4B61851E13251200D6C0E2 /* DailyWeatherModel.swift in Sources */,
+				3FFBE9A51E20F124009373BA /* CacheManager.swift in Sources */,
 				3FEC866A1E05C61500C2886F /* AppDelegate.swift in Sources */,
 				3F4B61831E12F7F300D6C0E2 /* WeatherModel.swift in Sources */,
 				3FEC86B51E09613100C2886F /* MappingDataJSONToModel.swift in Sources */,

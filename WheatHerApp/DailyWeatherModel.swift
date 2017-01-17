@@ -10,11 +10,11 @@ import Foundation
 
 class DailyWeatherModel  {
     
-    private var date : String
-    private var day : String
-    private var maxTemp : String
-    private  var   minTemp : String
-    private var desc : String
+    private(set) var date : String
+    private(set) var day : String
+    private(set) var maxTemp : String
+    private(set)  var   minTemp : String
+    private(set) var desc : String
     
     init (date: String, day: String, maxTemp: String, minTemp: String, desc: String ) {
         self.date = date

@@ -13,19 +13,45 @@ public class  FirstScreenView :  UIView {
     
     @IBOutlet weak var frontImageView: UIImageView!
     
-    var image : UIImage? {
+    var image : URL? {
         didSet {
-            self.frontImageView.image = image
+            do {
+                self.frontImageView.image = try UIImage(data: Data(contentsOf : image!))
+            }
+            catch  {
+                fatalError("Wrong Image URL")
+            }
         }
     }
     
     
-    @IBOutlet weak var weekDayLabel: UILabel!
-    
-    var dayOfWeek : WeekDays? {
+    @IBOutlet weak var Atmosphere: UILabel!
+
+    var customAtmosphere : String? {
         didSet {
-            self.weekDayLabel.text = dayOfWeek!.rawValue
-            
+            self.Atmosphere.text = self.customAtmosphere
+        }
+    } 
+    
+    @IBOutlet weak var Wind: UILabel!
+
+    var customWind: String? {
+       didSet {
+        self.Wind.text = self.customWind
         }
     }
+    
+    
+    @IBOutlet weak var Location: UILabel!
+    
+    var customLocation: String? {
+        didSet {
+            self.Location.text = self.customLocation
+        }
+    }
+    
+
+
+
+    
 }

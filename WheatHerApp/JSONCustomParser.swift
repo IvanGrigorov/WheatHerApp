@@ -10,6 +10,10 @@ import Foundation
 
 final class JSONCustomPaser : PMappingDataJSONToModel {
     
+
+
+    private var timer = Timer()
+    
     private init() {
         
     }
@@ -22,14 +26,20 @@ final class JSONCustomPaser : PMappingDataJSONToModel {
         return self.instance
     }
     
+    var cachedModel: PAbstractModel?
     
+    var rowJSON: Data?
     
-    static var rowJSON: Data?
-    
-    private(set) var parsedJSON : PAbstractModel?
+    var parsedJSON : PAbstractModel?
     
     // Parse the incomming Json to coresponding Model 
     func parseJSONToObject(modelType: String) -> Void {
+        //guard self.rowJSON != nil else {
+            // Tha Data is still not downloaded async
+            //self.timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: "timerAction", userInfo: ["delivered": self.rowJSON, "modelType": modelType]  , //repeats: true)
+        //    parseJSONToObject(modelType: modelType)
+        //    return
+        //}
         switch (modelType) {
         case "WeatherModel":
             self.parsedJSON  = self.parseWhetherJSON()
@@ -38,21 +48,36 @@ final class JSONCustomPaser : PMappingDataJSONToModel {
             
         }
     }
+//    private func timerAction(timer: Timer) {
+//        let data = timer.userInfo as? Dictionary<String, AnyObject>
+//        guard data != nil else {
+//            timer.invalidate()
+//            return
+//        }
+//        parseJSONToObject(modelType: data!["modelType"] as! String)
+//
+//    }
     
     
 
 
 
 
-    private func parseWhetherJSON() -> PAbstractModel {
-        var parsedJSON : Dictionary<String, Any>?
+    private func parseWhetherJSON() -> WeatherModel? {
+        if CachedManager.getInstance().toCacheOrNotToCache() {
+            return self.cachedModel! as? WeatherModel
+        }
+        guard self.rowJSON != nil else {
+            return nil
+        }
+        var tmpParsedJSON : Dictionary<String, Any>?
         do {
-             parsedJSON = try JSONSerialization.jsonObject(with: JSONCustomPaser.rowJSON!, options: JSONSerialization.ReadingOptions.mutableContainers) as? Dictionary<String, AnyObject>
+             tmpParsedJSON = try JSONSerialization.jsonObject(with: self.rowJSON!, options: JSONSerialization.ReadingOptions.mutableContainers) as? Dictionary<String, AnyObject>
         }
         catch {
             fatalError("Invalid json input. ")
         }
-        guard let unwrappedParsedJSON = parsedJSON else  {
+        guard let unwrappedParsedJSON = tmpParsedJSON else  {
             fatalError("Invalid JSON Structue.  ")
         }
         
@@ -75,8 +100,12 @@ final class JSONCustomPaser : PMappingDataJSONToModel {
             let forecastJSON = results["item"]!["forecast"] as? Array<Dictionary<String, AnyObject>> else {
                 fatalError("Wrong JSON Input")
         }
-        let imageURLConverted = URL(string: imageURL)
         
+        let updatedImageUrl = imageURL.replacingOccurrences(of: "http", with: "https")
+        var imageURLConverted = URL(string: updatedImageUrl)
+        // Reolacing because currently there is no such image 
+
+        imageURLConverted = URL(string: "https://media.giphy.com/media/6R3boOvvH0IMw/giphy.gif")
         //forecastJSON = JSONSerialization.jsonObject(with)
             
         var forecast = [DailyWeatherModel?](repeating: nil, count: 7)
@@ -90,7 +119,8 @@ final class JSONCustomPaser : PMappingDataJSONToModel {
     
         }
         
-        return WeatherModel(title: "Forecast", created: createdDate,  location: location, wind: wind, atmosphere: atmosphere, imageURL: imageURLConverted!, forecast: forecast as! [DailyWeatherModel])
-    
+        let wheather = WeatherModel(title: "Forecast", created: createdDate,  location: location, wind: wind, atmosphere: atmosphere, imageURL: imageURLConverted!, forecast: forecast as! [DailyWeatherModel])
+        self.cachedModel = wheather
+        return wheather
     }
 }
