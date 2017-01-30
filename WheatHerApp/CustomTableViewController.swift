@@ -11,20 +11,29 @@ import UIKit
 
 class CustomTableViewController : UITableViewController {
     
-    var viewData: DailyWeatherModel? = nil
+    var viewData: WeatherModel? {
+        didSet {
+            self.customDate = viewData!.date
+            self.customDay = viewData!.day
+            self.customDescription = viewData!.prediction
+            self.customMaxTemp = viewData!.temp
+            self.customMinTemp = viewData!.apparentTemp
+
+        }
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
         guard let data = viewData else {
-            fatalError("Data for daily forecast is not provided")
+            return
         }
         
         self.customDate = data.date
         self.customDay = data.day
-        self.customDescription = data.desc
-        self.customMaxTemp = data.maxTemp
-        self.customMinTemp = data.minTemp
+        self.customDescription = data.prediction
+        self.customMaxTemp = data.temp
+        self.customMinTemp = data.apparentTemp
     
 
     }
@@ -49,7 +58,7 @@ class CustomTableViewController : UITableViewController {
     
     var customMaxTemp : String? {
     didSet {
-    self.MaxTemp.text = self.customMaxTemp! + " F"
+    self.MaxTemp.text = self.customMaxTemp! + " C\u{00B0}"
         }
     }
     
@@ -57,7 +66,7 @@ class CustomTableViewController : UITableViewController {
     
     var customMinTemp : String? {
     didSet {
-    self.MinTemop.text = self.customMinTemp! + " F"
+    self.MinTemop.text = self.customMinTemp! + " C\u{00B0}"
         }
     }
     @IBOutlet weak var Description: UILabel!
@@ -65,6 +74,9 @@ class CustomTableViewController : UITableViewController {
     var customDescription : String? {
     didSet {
     self.Description.text = self.customDescription
+        self.Description.lineBreakMode = NSLineBreakMode.byWordWrapping
+        self.Description.numberOfLines = 0
+        
     }
     }
 }
