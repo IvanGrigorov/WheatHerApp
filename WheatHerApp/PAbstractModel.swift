@@ -12,6 +12,6 @@ import Foundation
 protocol PAbstractModel {
     
     var title: String {get set}
-    var created: String {get set}
+    var created: String? {get set}
     
 }

@@ -77,6 +77,17 @@
                                 <color key="textColor" red="1" green="0.9372679841495577" blue="0.069703601593078979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFP-QW-dT0">
+                                <rect key="frame" x="285" y="28" width="74" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Details">
+                                    <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="DetailsAction:" destination="dlK-mJ-dc9" eventType="touchUpInside" id="Gv1-Bk-KQu"/>
+                                    <segue destination="0sS-RK-hu0" kind="show" identifier="deatilWeatherView" id="YpR-6L-ytI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.51944130659103394" green="0.65277475118637085" blue="0.91063302755355835" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -123,16 +134,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUS-Hh-gUR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5812" y="-689.5052473763119"/>
+            <point key="canvasLocation" x="5306" y="-499"/>
+        </scene>
+        <!--Chart Manager Controller-->
+        <scene sceneID="EvV-j1-cSA">
+            <objects>
+                <viewController id="0sS-RK-hu0" customClass="ChartManagerController" customModule="C" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9LY-Tb-fcG"/>
+                        <viewControllerLayoutGuide type="bottom" id="il1-yA-0Hw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nh7-DZ-Nx6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQo-fB-Rh9" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="86" width="343" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="lineCahrt" destination="AQo-fB-Rh9" id="teX-ri-6l0"/>
+                        <outlet property="lineChart" destination="AQo-fB-Rh9" id="W3p-we-M4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rup-hi-nSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5264.8000000000002" y="-1228.3358320839582"/>
         </scene>
         <!--Custom Table View Controller-->
         <scene sceneID="ZeA-Om-DW1">
             <objects>
                 <tableViewController id="M8p-eE-5xh" customClass="CustomTableViewController" customModule="WheatHerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wvM-73-XtW">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="392"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="380"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="0.095890410958904104" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="1" green="1" blue="1" alpha="0.20999999999999999" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="0.20547945205479451" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection headerTitle="Date" id="OFH-p8-EpZ">
                                 <cells>
@@ -150,11 +192,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="gDb-5y-2rt" firstAttribute="centerY" secondItem="Ks3-ha-qdT" secondAttribute="centerY" id="WOd-yA-gzZ"/>
                                                 <constraint firstItem="gDb-5y-2rt" firstAttribute="centerX" secondItem="Ks3-ha-qdT" secondAttribute="centerX" id="j4t-c1-Ww8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -174,11 +218,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="tks-dZ-IEX" firstAttribute="centerX" secondItem="N6k-xH-29Y" secondAttribute="centerX" id="OQG-Qq-QuN"/>
                                                 <constraint firstItem="tks-dZ-IEX" firstAttribute="centerY" secondItem="N6k-xH-29Y" secondAttribute="centerY" id="Xdx-ML-hcN"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -198,11 +244,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.11369863013698631" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="CEa-Gd-g6x" firstAttribute="centerX" secondItem="Fuj-RL-G8m" secondAttribute="centerX" id="RG2-uR-gYg"/>
                                                 <constraint firstItem="CEa-Gd-g6x" firstAttribute="centerY" secondItem="Fuj-RL-G8m" secondAttribute="centerY" id="VZe-tE-T4J"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -222,35 +270,39 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="0.11" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="C3d-gc-7pu" firstAttribute="centerX" secondItem="6gQ-YM-yzT" secondAttribute="centerX" id="6yc-Vx-isK"/>
                                                 <constraint firstItem="C3d-gc-7pu" firstAttribute="centerY" secondItem="6gQ-YM-yzT" secondAttribute="centerY" id="BBb-sd-qT3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Description" id="bKF-kz-DML">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3fq-68-p5q">
+                                    <tableViewCell clipsSubviews="YES" contentMode="center" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3fq-68-p5q">
                                         <rect key="frame" x="0.0" y="316" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3fq-68-p5q" id="FNT-hR-3at">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="table" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjF-tH-bGj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="table" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjF-tH-bGj">
                                                     <rect key="frame" x="150" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.11" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="pjF-tH-bGj" firstAttribute="centerY" secondItem="FNT-hR-3at" secondAttribute="centerY" id="Eu1-5p-ggY"/>
                                                 <constraint firstItem="pjF-tH-bGj" firstAttribute="centerX" secondItem="FNT-hR-3at" secondAttribute="centerX" id="ZdR-wK-4K6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -263,18 +315,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yahoo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzV-GK-WiB">
-                                                    <rect key="frame" x="147" y="11" width="48" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sky API" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzV-GK-WiB">
+                                                    <rect key="frame" x="142" y="11" width="59" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.11" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstItem="RzV-GK-WiB" firstAttribute="centerY" secondItem="3cz-Bk-E93" secondAttribute="centerY" id="lUw-Cv-Yj6"/>
                                                 <constraint firstItem="RzV-GK-WiB" firstAttribute="centerX" secondItem="3cz-Bk-E93" secondAttribute="centerX" id="uP9-X4-xaH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -294,7 +348,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5U-MD-Iqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9831" y="267"/>
+            <point key="canvasLocation" x="9801" y="181"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Z8H-4q-zn0">
@@ -1093,6 +1147,6 @@
         <image name="weather_sun_sunny_day-512 23-24-29-925" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8ok-R6-0Ub"/>
+        <segue reference="DPK-lp-9t1"/>
     </inferredMetricsTieBreakers>
 </document>

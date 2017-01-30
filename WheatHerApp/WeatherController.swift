@@ -8,22 +8,23 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
-class WeatherController :  ViewController
+class WeatherController :  ViewController, CLLocationManagerDelegate
 {
-    var dailyWeather : [DailyWeatherModel]?
+    public static var locationManager = CLLocationManager()
+
+    private var embedController : CustomTableViewController?
+    private var destination : String?
+
+    var dailyWeather : [WeatherModel]?
     var weather : WeatherModel?
         @IBOutlet weak var frontImageView: UIImageView!
         
         var image : URL? {
             didSet {
-                do {
-                    self.frontImageView.image = try UIImage(data: Data(contentsOf : image!))
-                    //self.frontImageView.startAnimating()
-                }
-                catch  {
-                    fatalError("Wrong Image URL")
-                }
+                self.frontImageView.image =  UIImage(named: String(describing: image!))
+
             }
         }
         
@@ -53,42 +54,60 @@ class WeatherController :  ViewController
             }
         }
 
+    @IBAction func DetailsAction(_ sender: UIButton) {
+        // Navigate to details view
+    }
     @IBOutlet weak var embeddedView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //var jsonParser = JSONCustomPaser.getInstance()
-        //jsonParser.rowJSON = JSONDeliverer.deliverJSONFromFile(filePath: "WhetherData")
-        //jsonParser.parseJSONToObject(modelType: "WeatherModel")
-        
-    
-        self.customAtmosphere = self.weather!.atmosphere
-        self.customLocation = self.weather!.location
-        self.customWind = self.weather!.wind
-        self.image = self.weather!.imageURL
-        
-
-        
-        
-        
+        self.view.layer.contents = UIImage(named: BackgroundManager.returnNameOfBackgroundForDateTime())!.cgImage
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
+            manager.startUpdatingLocation()
+            
+
+        }
+
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         self.prepareDataForView()
+        self.embedController!.viewData = self.dailyWeather![Int(self.destination!)! - 1]
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        WeatherController.locationManager = CLLocationManager()
+
+        WeatherController.locationManager.delegate = self
+
+        WeatherController.locationManager.requestAlwaysAuthorization()
+
         switch(segue.identifier!) {
             case "table":
-                let destiantion = segue.destination as! CustomTableViewController
-                let destinationTitle = self.title!
-            destiantion.viewData = self.dailyWeather![Int(destinationTitle)! - 1]
-            default: return
+                let destiantionController = segue.destination as! CustomTableViewController
+                self.destination = self.title!
+                self.embedController = destiantionController
+            default: super.prepare(for: segue, sender: sender)
         }
     }
     
     private func prepareDataForView() {
-            self.starstDeliveringJSON()
-            var jsonParser = JSONCustomPaser.getInstance()
-            jsonParser.parseJSONToObject(modelType: "WeatherModel")
-            self.weather = jsonParser.parsedJSON as? WeatherModel
-            self.dailyWeather  = self.weather!.forecast
+        self.starstDeliveringJSON()
+        var jsonParser = JSONCustomPaser.getInstance()
+        jsonParser.parseJSONToObject(modelType: "WeatherModel")
+        self.weather = jsonParser.parsedJSON as? WeatherModel
+        self.dailyWeather  = self.weather!.dailyforecast!
+        self.customAtmosphere = self.weather!.atmosphere
+        self.customLocation = self.weather!.location
+        self.customWind = self.weather!.wind
+        self.image = self.weather!.imageURL
+
+        
 
     }
     

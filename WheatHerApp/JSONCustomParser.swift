@@ -42,7 +42,7 @@ final class JSONCustomPaser : PMappingDataJSONToModel {
         //}
         switch (modelType) {
         case "WeatherModel":
-            self.parsedJSON  = self.parseWhetherJSON()
+            self.parsedJSON  = self.parseDetailedWhetherJSON()
         default:
             fatalError("Invalid model dependency.")
             
@@ -119,8 +119,114 @@ final class JSONCustomPaser : PMappingDataJSONToModel {
     
         }
         
-        let wheather = WeatherModel(title: "Forecast", created: createdDate,  location: location, wind: wind, atmosphere: atmosphere, imageURL: imageURLConverted!, forecast: forecast as! [DailyWeatherModel])
+        let wheather = WeatherModel(title: "Forecast", created: createdDate,  location: location, wind: wind, atmosphere: atmosphere, imageURL: imageURLConverted!, forecast: forecast as? [DailyWeatherModel], temp: "40")
         self.cachedModel = wheather
         return wheather
+    }
+    
+    private func parseDetailedWhetherJSON() -> WeatherModel? {
+            if CachedManager.getInstance().toCacheOrNotToCache() {
+                return self.cachedModel! as? WeatherModel
+            }
+            guard self.rowJSON != nil else {
+                return nil
+            }
+            var tmpParsedJSON : Dictionary<String, Any>?
+            do {
+                tmpParsedJSON = try JSONSerialization.jsonObject(with: self.rowJSON!, options: JSONSerialization.ReadingOptions.mutableContainers) as? Dictionary<String, AnyObject>
+            }
+            catch {
+                fatalError("Invalid json input. ")
+            }
+            guard let unwrappedParsedJSON = tmpParsedJSON else  {
+                fatalError("Invalid JSON Structue.  ")
+            }
+        guard let currently = unwrappedParsedJSON["currently"] as? Dictionary<String, AnyObject> else {
+            fatalError()
+        }
+        guard let desc = currently["summary"] as? String,
+            let icon = currently["icon"] as? String,
+            let temp = currently["temperature"] as? Double  ,
+            let apparentTemp = currently["apparentTemperature"] as? Double,
+            let humidity = currently["humidity"] as? Double,
+            let windSpeed = currently["windSpeed"] as? Double,
+            let visibility = currently["visibility"] as? Double,
+            let predictionExpectation = currently["precipProbability"] as? Double,
+            let time = currently["time"] as? Int else {
+                fatalError()
+        }
+        guard let hourly = ((unwrappedParsedJSON["hourly"] as AnyObject) ["data"])! as? Array<Dictionary<String, AnyObject>> else {
+            fatalError()
+        }
+        var hourlyForecast = Array<WeatherModel>()
+        
+        guard let daily = ((unwrappedParsedJSON["daily"] as AnyObject) ["data"])! as? Array<Dictionary<String, AnyObject>> else {
+            fatalError()
+        }
+        var dailyForecast = Array<WeatherModel>()
+
+        for forecast in hourly {
+            let time = forecast["time"] as? Int
+            let date = Date(timeIntervalSince1970: TimeInterval(time!))
+            let dateAsYearTimeFormatter = DateFormatter()
+            dateAsYearTimeFormatter.dateFormat = "dd MM YY"
+            let dateAsDayTimeFormatter = DateFormatter()
+            dateAsDayTimeFormatter.dateFormat = "EEE"
+
+            hourlyForecast.append(WeatherModel(
+                created: "now", location: "Sofia",
+                wind: String(forecast["windSpeed"] as! Double),
+                atmosphere: String(forecast["humidity"] as! Double),
+                imageURL: URL(string: forecast["icon"] as! String)!,
+                forecast: nil,
+                prediction: String(forecast["summary"] as! String),
+                predictionExpectation: String(forecast["precipProbability"]  as! Double),
+                apparentTemp: String(forecast["apparentTemperature"] as! Double),
+                day: dateAsDayTimeFormatter.string(from: date),
+                date: dateAsYearTimeFormatter.string(from: date),
+                temp: String(forecast["temperature"] as! Double)))
+        }
+        
+        for forecast in daily {
+            let time = forecast["time"] as? Int
+            let date = Date(timeIntervalSince1970: TimeInterval(time!))
+            let dateAsYearTimeFormatter = DateFormatter()
+            dateAsYearTimeFormatter.dateFormat = "dd MM YY"
+            let dateAsDayTimeFormatter = DateFormatter()
+            dateAsDayTimeFormatter.dateFormat = "EEE"
+
+            dailyForecast.append(WeatherModel(
+                created: "now", location: "Sofia",
+                wind: String(forecast["windSpeed"] as! Double),
+                atmosphere: String(forecast["humidity"] as! Double),
+                imageURL: URL(string: forecast["icon"] as! String)!,
+                forecast: nil,
+                prediction: String(forecast["summary"] as! String),
+                predictionExpectation: String(forecast["precipProbability"]  as! Double),
+                apparentTemp: String(forecast["apparentTemperatureMax"] as! Double),
+                day: dateAsDayTimeFormatter.string(from: date),
+                date: dateAsYearTimeFormatter.string(from: date),
+                temp: String(forecast["apparentTemperatureMin"] as! Double)))
+        }
+        
+        let date = Date(timeIntervalSince1970: TimeInterval(time))
+        let dateAsYearTimeFormatter = DateFormatter()
+        dateAsYearTimeFormatter.dateFormat = "dd MM YY"
+        let dateAsDayTimeFormatter = DateFormatter()
+        dateAsYearTimeFormatter.dateFormat = "EEE"
+
+
+        let weather =  WeatherModel(
+            created: "now", location: "Sofia", wind: String(windSpeed), atmosphere: String(humidity), imageURL: URL(string: icon)!, forecast: nil , prediction: desc, predictionExpectation: String(predictionExpectation), nearestStormDistance: nil, apparentTemp: String(apparentTemp), visibility: String(visibility),
+                dailyForecast: dailyForecast,
+                haurlyForecast: hourlyForecast,
+
+                day: dateAsDayTimeFormatter.string(from: date),
+                date: dateAsYearTimeFormatter.string(from: date),
+                temp: String(temp))
+
+        self.cachedModel = weather
+        return weather
+
     }
 }
