@@ -232,11 +232,7 @@
 				3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */,
 				3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */,
 <<<<<<< HEAD
-<<<<<<< HEAD
 				3F6E2A1B1E3E92DB0035AF3D /* ChartManagerController.swift */,
-=======
-				3FE8AC661E3CE1C90062A47B /* UserDataController.swift */,
->>>>>>> origin/master
 =======
 				3FE8AC661E3CE1C90062A47B /* UserDataController.swift */,
 >>>>>>> origin/master
