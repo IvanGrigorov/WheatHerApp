@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F31AB231E3F7B7600C29C7D /* UserInformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31AB221E3F7B7600C29C7D /* UserInformationController.swift */; };
+		3F31AB341E3F924300C29C7D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F31AB331E3F924300C29C7D /* RealmSwift.framework */; };
+		3F31AB351E3F924300C29C7D /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F31AB331E3F924300C29C7D /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F31AB381E3F924900C29C7D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F31AB371E3F924900C29C7D /* Realm.framework */; };
+		3F31AB391E3F924900C29C7D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F31AB371E3F924900C29C7D /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F31AB3C1E3F979100C29C7D /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31AB3B1E3F979100C29C7D /* RealmModels.swift */; };
+		3F31AB3E1E3F98BB00C29C7D /* RealmWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31AB3D1E3F98BB00C29C7D /* RealmWriter.swift */; };
 		3F3321691E340C29003D5855 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F33215A1E340B81003D5855 /* CoreLocation.framework */; };
 		3F4B617F1E0EC7BA00D6C0E2 /* PAbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B617E1E0EC7BA00D6C0E2 /* PAbstractModel.swift */; };
 		3F4B61811E10340700D6C0E2 /* JSONDeliverer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B61801E10340700D6C0E2 /* JSONDeliverer.swift */; };
 		3F4B61831E12F7F300D6C0E2 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B61821E12F7F300D6C0E2 /* WeatherModel.swift */; };
 		3F4B61851E13251200D6C0E2 /* DailyWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B61841E13251200D6C0E2 /* DailyWeatherModel.swift */; };
 		3F6E2A1C1E3E92DB0035AF3D /* ChartManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E2A1B1E3E92DB0035AF3D /* ChartManagerController.swift */; };
-		3FA5EECC1E3CB60B0094DE0A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA5EEC71E3CB5F60094DE0A /* Charts.framework */; };
 		3FE2F5A71E19BDCA005F1B2C /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */; };
 		3FE8AC671E3CE1C90062A47B /* UserDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8AC661E3CE1C90062A47B /* UserDataController.swift */; };
 		3FEC866A1E05C61500C2886F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86691E05C61500C2886F /* AppDelegate.swift */; };
@@ -33,6 +39,8 @@
 		3FFBE9A11E1C0CE0009373BA /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */; };
 		3FFBE9A51E20F124009373BA /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBE9A41E20F124009373BA /* CacheManager.swift */; };
 		3FFBE9AA1E2A85DA009373BA /* NetowrkDataErors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBE9A91E2A85DA009373BA /* NetowrkDataErors.swift */; };
+		751159E1CC0344DD6D616346 /* Pods_WheatHerAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DA4C5331DF91B1433996E5 /* Pods_WheatHerAppTests.framework */; };
+		910A13F7FDF0DA999303799D /* Pods_WheatHerAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08357E37E2BB6EC94F06FC21 /* Pods_WheatHerAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +81,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3F31AB361E3F924300C29C7D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F31AB391E3F924900C29C7D /* Realm.framework in Embed Frameworks */,
+				3F31AB351E3F924300C29C7D /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		08357E37E2BB6EC94F06FC21 /* Pods_WheatHerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WheatHerAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28597629BF899C4AC6C6D61A /* Pods_WheatHerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WheatHerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F31AB221E3F7B7600C29C7D /* UserInformationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInformationController.swift; sourceTree = "<group>"; };
+		3F31AB251E3F915C00C29C7D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../Downloads/realm-swift-2.4.1/ios/swift-3.0.2/RealmSwift.framework"; sourceTree = "<group>"; };
+		3F31AB2A1E3F916000C29C7D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-2.4.1/ios/swift-3.0.2/Realm.framework"; sourceTree = "<group>"; };
+		3F31AB2C1E3F916E00C29C7D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		3F31AB301E3F917600C29C7D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		3F31AB331E3F924300C29C7D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		3F31AB371E3F924900C29C7D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		3F31AB3B1E3F979100C29C7D /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
+		3F31AB3D1E3F98BB00C29C7D /* RealmWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmWriter.swift; sourceTree = "<group>"; };
 		3F33215A1E340B81003D5855 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F33215C1E340B98003D5855 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		3F3321601E340BBB003D5855 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
@@ -112,6 +146,13 @@
 		3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
 		3FFBE9A41E20F124009373BA /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		3FFBE9A91E2A85DA009373BA /* NetowrkDataErors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetowrkDataErors.swift; sourceTree = "<group>"; };
+		66357B99FCC7680D467086C3 /* Pods-WheatHerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheatHerAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WheatHerAppTests/Pods-WheatHerAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		912BA03EBF1A73156614E4BD /* Pods-WheatHerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheatHerAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WheatHerAppTests/Pods-WheatHerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		977E31A1A42BB4FEDFEF9B7D /* Pods-WheatHerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheatHerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WheatHerApp/Pods-WheatHerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9C061A5F26505FD25A669755 /* Pods-WheatHerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheatHerAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WheatHerAppUITests/Pods-WheatHerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C67B49461083AB13754C1D84 /* Pods-WheatHerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheatHerAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WheatHerAppUITests/Pods-WheatHerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D59BDB8794407D676462EF6D /* Pods-WheatHerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheatHerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WheatHerApp/Pods-WheatHerApp.release.xcconfig"; sourceTree = "<group>"; };
+		F1DA4C5331DF91B1433996E5 /* Pods_WheatHerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WheatHerAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +160,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FA5EECC1E3CB60B0094DE0A /* Charts.framework in Frameworks */,
+				3F31AB381E3F924900C29C7D /* Realm.framework in Frameworks */,
 				3F3321691E340C29003D5855 /* CoreLocation.framework in Frameworks */,
+				3F31AB341E3F924300C29C7D /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751159E1CC0344DD6D616346 /* Pods_WheatHerAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,15 +178,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910A13F7FDF0DA999303799D /* Pods_WheatHerAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F31AB3A1E3F973A00C29C7D /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				3F31AB3B1E3F979100C29C7D /* RealmModels.swift */,
+				3F31AB3D1E3F98BB00C29C7D /* RealmWriter.swift */,
+			);
+			name = RealmModels;
+			sourceTree = "<group>";
+		};
 		3F3321591E340B81003D5855 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F31AB2A1E3F916000C29C7D /* Realm.framework */,
+				3F31AB251E3F915C00C29C7D /* RealmSwift.framework */,
 				3FA5EEBE1E3CB54D0094DE0A /* ChartsDemo-OSX */,
 				3FA5EEBC1E3CB5380094DE0A /* Charts-master */,
 				3F3321671E340C10003D5855 /* AudioToolbox.framework */,
@@ -151,6 +206,9 @@
 				3F3321601E340BBB003D5855 /* CoreMIDI.framework */,
 				3F33215C1E340B98003D5855 /* CoreMedia.framework */,
 				3F33215A1E340B81003D5855 /* CoreLocation.framework */,
+				28597629BF899C4AC6C6D61A /* Pods_WheatHerApp.framework */,
+				F1DA4C5331DF91B1433996E5 /* Pods_WheatHerAppTests.framework */,
+				08357E37E2BB6EC94F06FC21 /* Pods_WheatHerAppUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,11 +226,16 @@
 		3FEC865D1E05C61500C2886F = {
 			isa = PBXGroup;
 			children = (
+				3F31AB371E3F924900C29C7D /* Realm.framework */,
+				3F31AB331E3F924300C29C7D /* RealmSwift.framework */,
+				3F31AB301E3F917600C29C7D /* Realm.framework */,
+				3F31AB2C1E3F916E00C29C7D /* RealmSwift.framework */,
 				3FFBE9A71E2A85AF009373BA /* Z */,
 				3FEC86801E05C61600C2886F /* WheatHerAppTests */,
 				3FEC868B1E05C61600C2886F /* WheatHerAppUITests */,
 				3FEC86671E05C61500C2886F /* Products */,
 				3F3321591E340B81003D5855 /* Frameworks */,
+				A54E61AA960A70D5ABA14CF6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +252,7 @@
 		3FEC86681E05C61500C2886F /* WheatHerApp */ = {
 			isa = PBXGroup;
 			children = (
+				3F31AB3A1E3F973A00C29C7D /* RealmModels */,
 				3FFBE9A81E2A85B8009373BA /* Erors */,
 				3FEC86B21E09606600C2886F /* LogicModels */,
 				3FEC86AC1E094FB400C2886F /* Data */,
@@ -230,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */,
+				3F31AB221E3F7B7600C29C7D /* UserInformationController.swift */,
 				3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */,
 				3F6E2A1B1E3E92DB0035AF3D /* ChartManagerController.swift */,
 			);
@@ -298,6 +363,19 @@
 			name = Erors;
 			sourceTree = "<group>";
 		};
+		A54E61AA960A70D5ABA14CF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				977E31A1A42BB4FEDFEF9B7D /* Pods-WheatHerApp.debug.xcconfig */,
+				D59BDB8794407D676462EF6D /* Pods-WheatHerApp.release.xcconfig */,
+				912BA03EBF1A73156614E4BD /* Pods-WheatHerAppTests.debug.xcconfig */,
+				66357B99FCC7680D467086C3 /* Pods-WheatHerAppTests.release.xcconfig */,
+				9C061A5F26505FD25A669755 /* Pods-WheatHerAppUITests.debug.xcconfig */,
+				C67B49461083AB13754C1D84 /* Pods-WheatHerAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,9 +383,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FEC86911E05C61600C2886F /* Build configuration list for PBXNativeTarget "WheatHerApp" */;
 			buildPhases = (
+				75F45E7F45312D6E952EB8ED /* [CP] Check Pods Manifest.lock */,
 				3FEC86621E05C61500C2886F /* Sources */,
 				3FEC86631E05C61500C2886F /* Frameworks */,
 				3FEC86641E05C61500C2886F /* Resources */,
+				C779EE818564D85021BC21AB /* [CP] Embed Pods Frameworks */,
+				E8B74CAA27548FD27312562B /* [CP] Copy Pods Resources */,
+				3F31AB361E3F924300C29C7D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,9 +404,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FEC86941E05C61600C2886F /* Build configuration list for PBXNativeTarget "WheatHerAppTests" */;
 			buildPhases = (
+				A0CC0BE9FBB91579FC983DC5 /* [CP] Check Pods Manifest.lock */,
 				3FEC86791E05C61600C2886F /* Sources */,
 				3FEC867A1E05C61600C2886F /* Frameworks */,
 				3FEC867B1E05C61600C2886F /* Resources */,
+				B737A5937623C49AD12F9FCA /* [CP] Embed Pods Frameworks */,
+				7C760D2E7C78094781ECA060 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,9 +425,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FEC86971E05C61600C2886F /* Build configuration list for PBXNativeTarget "WheatHerAppUITests" */;
 			buildPhases = (
+				00CCDD9DCB446F8721384100 /* [CP] Check Pods Manifest.lock */,
 				3FEC86841E05C61600C2886F /* Sources */,
 				3FEC86851E05C61600C2886F /* Frameworks */,
 				3FEC86861E05C61600C2886F /* Resources */,
+				C605D794092FDF9F99031921 /* [CP] Embed Pods Frameworks */,
+				138EE2013C97E9AA5E408938 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -458,6 +546,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00CCDD9DCB446F8721384100 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		138EE2013C97E9AA5E408938 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WheatHerAppUITests/Pods-WheatHerAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75F45E7F45312D6E952EB8ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C760D2E7C78094781ECA060 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WheatHerAppTests/Pods-WheatHerAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0CC0BE9FBB91579FC983DC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B737A5937623C49AD12F9FCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WheatHerAppTests/Pods-WheatHerAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C605D794092FDF9F99031921 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WheatHerAppUITests/Pods-WheatHerAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C779EE818564D85021BC21AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WheatHerApp/Pods-WheatHerApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8B74CAA27548FD27312562B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WheatHerApp/Pods-WheatHerApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3FEC86621E05C61500C2886F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -472,10 +698,13 @@
 				3FE2F5A71E19BDCA005F1B2C /* WeatherController.swift in Sources */,
 				3FEC86721E05C61500C2886F /* WheatHerApp.xcdatamodeld in Sources */,
 				3F4B61851E13251200D6C0E2 /* DailyWeatherModel.swift in Sources */,
+				3F31AB3C1E3F979100C29C7D /* RealmModels.swift in Sources */,
 				3FFBE9A51E20F124009373BA /* CacheManager.swift in Sources */,
+				3F31AB231E3F7B7600C29C7D /* UserInformationController.swift in Sources */,
 				3FEC866A1E05C61500C2886F /* AppDelegate.swift in Sources */,
 				3F4B61831E12F7F300D6C0E2 /* WeatherModel.swift in Sources */,
 				3FEC86B51E09613100C2886F /* MappingDataJSONToModel.swift in Sources */,
+				3F31AB3E1E3F98BB00C29C7D /* RealmWriter.swift in Sources */,
 				3F4B617F1E0EC7BA00D6C0E2 /* PAbstractModel.swift in Sources */,
 				3FEC86A81E05F51200C2886F /* FirstScreenView.swift in Sources */,
 				3FF66B7F1E312D40001AC49D /* Backgroundmanager.swift in Sources */,
@@ -622,7 +851,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -630,8 +859,14 @@
 		};
 		3FEC86921E05C61600C2886F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977E31A1A42BB4FEDFEF9B7D /* Pods-WheatHerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = /Users/student/Documents/WheatHerApp;
 				INFOPLIST_FILE = WheatHerApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MacAcademy-OutsourceBg.WheatHerApp";
@@ -642,8 +877,14 @@
 		};
 		3FEC86931E05C61600C2886F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D59BDB8794407D676462EF6D /* Pods-WheatHerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = /Users/student/Documents/WheatHerApp;
 				INFOPLIST_FILE = WheatHerApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MacAcademy-OutsourceBg.WheatHerApp";
@@ -654,6 +895,7 @@
 		};
 		3FEC86951E05C61600C2886F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 912BA03EBF1A73156614E4BD /* Pods-WheatHerAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -668,6 +910,7 @@
 		};
 		3FEC86961E05C61600C2886F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66357B99FCC7680D467086C3 /* Pods-WheatHerAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -682,6 +925,7 @@
 		};
 		3FEC86981E05C61600C2886F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C061A5F26505FD25A669755 /* Pods-WheatHerAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = WheatHerAppUITests/Info.plist;
@@ -695,6 +939,7 @@
 		};
 		3FEC86991E05C61600C2886F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C67B49461083AB13754C1D84 /* Pods-WheatHerAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = WheatHerAppUITests/Info.plist;
