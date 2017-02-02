@@ -615,8 +615,8 @@
                   symbolName = "WheatHerApp.ChartManagerController.__ivar_destroyer"
                   moduleName = "WheatHerApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Documents/WheatHerApp/WheatHerApp/ChartManagerController.swift"
-                  timestampString = "507486504.291257"
+                  urlString = "file:///Users/student/Desktop/WheatHerApp/WheatHerApp/ChartManagerController.swift"
+                  timestampString = "507471667.772793"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -630,8 +630,8 @@
                   symbolName = "WheatHerApp.ChartManagerController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; WheatHerApp.ChartManagerController"
                   moduleName = "WheatHerApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Documents/WheatHerApp/WheatHerApp/ChartManagerController.swift"
-                  timestampString = "507486504.293646"
+                  urlString = "file:///Users/student/Desktop/WheatHerApp/WheatHerApp/ChartManagerController.swift"
+                  timestampString = "507471667.775405"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -645,8 +645,8 @@
                   symbolName = "WheatHerApp.ChartManagerController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; WheatHerApp.ChartManagerController"
                   moduleName = "WheatHerApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Documents/WheatHerApp/WheatHerApp/ChartManagerController.swift"
-                  timestampString = "507486504.295965"
+                  urlString = "file:///Users/student/Desktop/WheatHerApp/WheatHerApp/ChartManagerController.swift"
+                  timestampString = "507471667.77771"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -660,8 +660,8 @@
                   symbolName = "WheatHerApp.ChartManagerController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;WheatHerApp.ChartManagerController&gt;"
                   moduleName = "WheatHerApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Documents/WheatHerApp/WheatHerApp/ChartManagerController.swift"
-                  timestampString = "507486504.29855"
+                  urlString = "file:///Users/student/Desktop/WheatHerApp/WheatHerApp/ChartManagerController.swift"
+                  timestampString = "507471667.780257"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -675,8 +675,8 @@
                   symbolName = "WheatHerApp.ChartManagerController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;WheatHerApp.ChartManagerController&gt;"
                   moduleName = "WheatHerApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Documents/WheatHerApp/WheatHerApp/ChartManagerController.swift"
-                  timestampString = "507486504.300662"
+                  urlString = "file:///Users/student/Desktop/WheatHerApp/WheatHerApp/ChartManagerController.swift"
+                  timestampString = "507471667.782441"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -716,100 +716,6 @@
             endingLineNumber = "95"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WheatHerApp/UserInformationController.swift"
-            timestampString = "507486330.231778"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "UserInformationController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WheatHerApp/UserInformationController.swift"
-            timestampString = "507486330.231778"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "UserInformationController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WheatHerApp.UserInformationController.clothingStyleText.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
-                  moduleName = "WheatHerApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Documents/WheatHerApp/WheatHerApp/UserInformationController.swift"
-                  timestampString = "507486104.90823"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WheatHerApp.UserInformationController.clothingStyleText.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
-                  moduleName = "WheatHerApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Documents/WheatHerApp/WheatHerApp/UserInformationController.swift"
-                  timestampString = "507486104.910289"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WheatHerApp.UserInformationController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; WheatHerApp.UserInformationController"
-                  moduleName = "WheatHerApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Documents/WheatHerApp/WheatHerApp/UserInformationController.swift"
-                  timestampString = "507486104.912059"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "469">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WheatHerApp.UserInformationController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;WheatHerApp.UserInformationController&gt;"
-                  moduleName = "WheatHerApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Documents/WheatHerApp/WheatHerApp/UserInformationController.swift"
-                  timestampString = "507486104.913751"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "344">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

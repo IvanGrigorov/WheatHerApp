@@ -9,7 +9,6 @@
 import UIKit
 import CoreLocation
 
-
 class ViewController: UIViewController {
     
 
