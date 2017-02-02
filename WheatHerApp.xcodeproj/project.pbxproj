@@ -14,6 +14,12 @@
 		3F4B61851E13251200D6C0E2 /* DailyWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B61841E13251200D6C0E2 /* DailyWeatherModel.swift */; };
 		3F6E2A1C1E3E92DB0035AF3D /* ChartManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E2A1B1E3E92DB0035AF3D /* ChartManagerController.swift */; };
 		3FA5EECC1E3CB60B0094DE0A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA5EEC71E3CB5F60094DE0A /* Charts.framework */; };
+		3FD8317F1E43762D008B0395 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD8317E1E43762D008B0395 /* Realm.framework */; };
+		3FD831801E43762D008B0395 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD8317E1E43762D008B0395 /* Realm.framework */; };
+		3FD831811E43762D008B0395 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD8317E1E43762D008B0395 /* Realm.framework */; };
+		3FD831831E437664008B0395 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD831821E437664008B0395 /* RealmSwift.framework */; };
+		3FD831841E437664008B0395 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD831821E437664008B0395 /* RealmSwift.framework */; };
+		3FD831851E437664008B0395 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD831821E437664008B0395 /* RealmSwift.framework */; };
 		3FE2F5A71E19BDCA005F1B2C /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */; };
 		3FE8AC671E3CE1C90062A47B /* UserDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8AC661E3CE1C90062A47B /* UserDataController.swift */; };
 		3FEC866A1E05C61500C2886F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86691E05C61500C2886F /* AppDelegate.swift */; };
@@ -87,6 +93,8 @@
 		3FA5EEBC1E3CB5380094DE0A /* Charts-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Charts-master"; path = "../../Downloads/Charts-master"; sourceTree = "<group>"; };
 		3FA5EEBE1E3CB54D0094DE0A /* ChartsDemo-OSX */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "ChartsDemo-OSX"; path = "../../Downloads/Charts-master/ChartsDemo-OSX"; sourceTree = "<group>"; };
 		3FA5EEC01E3CB5F60094DE0A /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		3FD8317E1E43762D008B0395 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		3FD831821E437664008B0395 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		3FE8AC661E3CE1C90062A47B /* UserDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataController.swift; sourceTree = "<group>"; };
 		3FEC86661E05C61500C2886F /* WheatHerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheatHerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,7 +127,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD8317F1E43762D008B0395 /* Realm.framework in Frameworks */,
 				3FA5EECC1E3CB60B0094DE0A /* Charts.framework in Frameworks */,
+				3FD831831E437664008B0395 /* RealmSwift.framework in Frameworks */,
 				3F3321691E340C29003D5855 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD831841E437664008B0395 /* RealmSwift.framework in Frameworks */,
+				3FD831801E43762D008B0395 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +147,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD831851E437664008B0395 /* RealmSwift.framework in Frameworks */,
+				3FD831811E43762D008B0395 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +213,9 @@
 				3FEC86691E05C61500C2886F /* AppDelegate.swift */,
 				3FEC866B1E05C61500C2886F /* ViewController.swift */,
 				3FEC866D1E05C61500C2886F /* Main.storyboard */,
+				3FD8317E1E43762D008B0395 /* Realm.framework */,
 				3FEC86731E05C61500C2886F /* Assets.xcassets */,
+				3FD831821E437664008B0395 /* RealmSwift.framework */,
 				3FEC86751E05C61500C2886F /* LaunchScreen.storyboard */,
 				3FA5EEC01E3CB5F60094DE0A /* Charts.xcodeproj */,
 				3FEC86781E05C61500C2886F /* Info.plist */,
@@ -632,6 +648,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WheatHerApp",
+				);
 				INFOPLIST_FILE = WheatHerApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MacAcademy-OutsourceBg.WheatHerApp";
@@ -644,6 +664,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WheatHerApp",
+				);
 				INFOPLIST_FILE = WheatHerApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MacAcademy-OutsourceBg.WheatHerApp";
@@ -657,6 +681,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WheatHerApp",
+				);
 				INFOPLIST_FILE = WheatHerAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MacAcademy-OutsourceBg.WheatHerAppTests";
@@ -671,6 +699,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WheatHerApp",
+				);
 				INFOPLIST_FILE = WheatHerAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MacAcademy-OutsourceBg.WheatHerAppTests";
@@ -684,6 +716,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WheatHerApp",
+				);
 				INFOPLIST_FILE = WheatHerAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MacAcademy-OutsourceBg.WheatHerAppUITests";
@@ -697,6 +733,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WheatHerApp",
+				);
 				INFOPLIST_FILE = WheatHerAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MacAcademy-OutsourceBg.WheatHerAppUITests";
