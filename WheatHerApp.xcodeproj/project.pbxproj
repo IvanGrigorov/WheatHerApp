@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2D49E71E437E6D00458439 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D49E61E437E6D00458439 /* RealmModels.swift */; };
+		3F2D49EC1E437E8B00458439 /* RealmWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D49EB1E437E8B00458439 /* RealmWriter.swift */; };
+		3F2D49EE1E437ED800458439 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D49ED1E437ED800458439 /* UserController.swift */; };
 		3F3321691E340C29003D5855 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F33215A1E340B81003D5855 /* CoreLocation.framework */; };
 		3F4B617F1E0EC7BA00D6C0E2 /* PAbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B617E1E0EC7BA00D6C0E2 /* PAbstractModel.swift */; };
 		3F4B61811E10340700D6C0E2 /* JSONDeliverer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B61801E10340700D6C0E2 /* JSONDeliverer.swift */; };
@@ -80,6 +83,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F2D49E61E437E6D00458439 /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
+		3F2D49EB1E437E8B00458439 /* RealmWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmWriter.swift; sourceTree = "<group>"; };
+		3F2D49ED1E437ED800458439 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		3F33215A1E340B81003D5855 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F33215C1E340B98003D5855 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		3F3321601E340BBB003D5855 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
@@ -248,6 +254,7 @@
 				3FFBE9A01E1C0CE0009373BA /* CustomTableViewController.swift */,
 				3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */,
 				3F6E2A1B1E3E92DB0035AF3D /* ChartManagerController.swift */,
+				3F2D49ED1E437ED800458439 /* UserController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -258,6 +265,7 @@
 				3F4B617E1E0EC7BA00D6C0E2 /* PAbstractModel.swift */,
 				3F4B61821E12F7F300D6C0E2 /* WeatherModel.swift */,
 				3F4B61841E13251200D6C0E2 /* DailyWeatherModel.swift */,
+				3F2D49E61E437E6D00458439 /* RealmModels.swift */,
 			);
 			name = DataModels;
 			sourceTree = "<group>";
@@ -294,6 +302,7 @@
 				3F4B61801E10340700D6C0E2 /* JSONDeliverer.swift */,
 				3FFBE9A41E20F124009373BA /* CacheManager.swift */,
 				3FF66B7E1E312D40001AC49D /* Backgroundmanager.swift */,
+				3F2D49EB1E437E8B00458439 /* RealmWriter.swift */,
 			);
 			name = LogicModels;
 			sourceTree = "<group>";
@@ -482,6 +491,7 @@
 				3FE8AC671E3CE1C90062A47B /* UserDataController.swift in Sources */,
 				3FFBE9A11E1C0CE0009373BA /* CustomTableViewController.swift in Sources */,
 				3F4B61811E10340700D6C0E2 /* JSONDeliverer.swift in Sources */,
+				3F2D49E71E437E6D00458439 /* RealmModels.swift in Sources */,
 				3FFBE9AA1E2A85DA009373BA /* NetowrkDataErors.swift in Sources */,
 				3FEC866C1E05C61500C2886F /* ViewController.swift in Sources */,
 				3F6E2A1C1E3E92DB0035AF3D /* ChartManagerController.swift in Sources */,
@@ -492,9 +502,11 @@
 				3FEC866A1E05C61500C2886F /* AppDelegate.swift in Sources */,
 				3F4B61831E12F7F300D6C0E2 /* WeatherModel.swift in Sources */,
 				3FEC86B51E09613100C2886F /* MappingDataJSONToModel.swift in Sources */,
+				3F2D49EC1E437E8B00458439 /* RealmWriter.swift in Sources */,
 				3F4B617F1E0EC7BA00D6C0E2 /* PAbstractModel.swift in Sources */,
 				3FEC86A81E05F51200C2886F /* FirstScreenView.swift in Sources */,
 				3FF66B7F1E312D40001AC49D /* Backgroundmanager.swift in Sources */,
+				3F2D49EE1E437ED800458439 /* UserController.swift in Sources */,
 				3FEC86A61E05E8EE00C2886F /* WeekDaysEnum.swift in Sources */,
 				3FEC86B71E09B68100C2886F /* JSONCustomParser.swift in Sources */,
 			);
