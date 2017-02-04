@@ -12,7 +12,8 @@ import UIKit
 class UserController: ViewController
 {
     @IBAction func submitData(_ sender: UIButton) {
-        RealmWriter.writeUser(name: nameText.text!, age: Int(ageText.text!)!, clothingStyle: clothingStyleText.text!)
+        let age = Int(self.ageText.text!)!
+        RealmWriter.writeUser(name: nameText.text!, age: age, clothingStyle: clothingStyleText.text!)
     }
     
     @IBOutlet weak var nameText: UITextField!

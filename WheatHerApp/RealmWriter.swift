@@ -13,11 +13,12 @@ import RealmSwift
 
 class RealmWriter {
     
-    private static let realm = try! Realm()
+    static let realm = try! Realm()
     
     public static func writeUser(name: String, age: Int, clothingStyle: String) {
         try! realm.write() {
-            let _ = realm.create(User.self, value: [name, age, clothingStyle])
+            let user = User(value: ["name": name, "age": age, "clothingStyle": clothingStyle])
+            realm.add(user)
         }
     }
 }

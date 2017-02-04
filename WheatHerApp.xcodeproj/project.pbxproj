@@ -10,21 +10,25 @@
 		3F2D49E71E437E6D00458439 /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D49E61E437E6D00458439 /* RealmModels.swift */; };
 		3F2D49EC1E437E8B00458439 /* RealmWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D49EB1E437E8B00458439 /* RealmWriter.swift */; };
 		3F2D49EE1E437ED800458439 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D49ED1E437ED800458439 /* UserController.swift */; };
+		3F2D4A051E43862600458439 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD8317E1E43762D008B0395 /* Realm.framework */; };
+		3F2D4A061E43862600458439 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD8317E1E43762D008B0395 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F2D4A071E43862600458439 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD831821E437664008B0395 /* RealmSwift.framework */; };
+		3F2D4A081E43862600458439 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD831821E437664008B0395 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F3321691E340C29003D5855 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F33215A1E340B81003D5855 /* CoreLocation.framework */; };
 		3F4B617F1E0EC7BA00D6C0E2 /* PAbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B617E1E0EC7BA00D6C0E2 /* PAbstractModel.swift */; };
 		3F4B61811E10340700D6C0E2 /* JSONDeliverer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B61801E10340700D6C0E2 /* JSONDeliverer.swift */; };
 		3F4B61831E12F7F300D6C0E2 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B61821E12F7F300D6C0E2 /* WeatherModel.swift */; };
 		3F4B61851E13251200D6C0E2 /* DailyWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B61841E13251200D6C0E2 /* DailyWeatherModel.swift */; };
 		3F6E2A1C1E3E92DB0035AF3D /* ChartManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E2A1B1E3E92DB0035AF3D /* ChartManagerController.swift */; };
+		3F96C30A1E44C12F005D2829 /* DeatiledController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96C3091E44C12F005D2829 /* DeatiledController.swift */; };
+		3F96C30D1E44D582005D2829 /* TipViewCobtroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96C30C1E44D582005D2829 /* TipViewCobtroller.swift */; };
+		3F96C3121E44D824005D2829 /* RealmReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F96C3111E44D824005D2829 /* RealmReader.swift */; };
 		3FA5EECC1E3CB60B0094DE0A /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA5EEC71E3CB5F60094DE0A /* Charts.framework */; };
-		3FD8317F1E43762D008B0395 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD8317E1E43762D008B0395 /* Realm.framework */; };
 		3FD831801E43762D008B0395 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD8317E1E43762D008B0395 /* Realm.framework */; };
 		3FD831811E43762D008B0395 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD8317E1E43762D008B0395 /* Realm.framework */; };
-		3FD831831E437664008B0395 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD831821E437664008B0395 /* RealmSwift.framework */; };
 		3FD831841E437664008B0395 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD831821E437664008B0395 /* RealmSwift.framework */; };
 		3FD831851E437664008B0395 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD831821E437664008B0395 /* RealmSwift.framework */; };
 		3FE2F5A71E19BDCA005F1B2C /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */; };
-		3FE8AC671E3CE1C90062A47B /* UserDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8AC661E3CE1C90062A47B /* UserDataController.swift */; };
 		3FEC866A1E05C61500C2886F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC86691E05C61500C2886F /* AppDelegate.swift */; };
 		3FEC866C1E05C61500C2886F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC866B1E05C61500C2886F /* ViewController.swift */; };
 		3FEC866F1E05C61500C2886F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEC866D1E05C61500C2886F /* Main.storyboard */; };
@@ -82,6 +86,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3F2D4A091E43862600458439 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F2D4A081E43862600458439 /* RealmSwift.framework in Embed Frameworks */,
+				3F2D4A061E43862600458439 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3F2D49E61E437E6D00458439 /* RealmModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
 		3F2D49EB1E437E8B00458439 /* RealmWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmWriter.swift; sourceTree = "<group>"; };
@@ -96,13 +115,15 @@
 		3F4B61821E12F7F300D6C0E2 /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		3F4B61841E13251200D6C0E2 /* DailyWeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyWeatherModel.swift; sourceTree = "<group>"; };
 		3F6E2A1B1E3E92DB0035AF3D /* ChartManagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartManagerController.swift; sourceTree = "<group>"; };
+		3F96C3091E44C12F005D2829 /* DeatiledController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeatiledController.swift; sourceTree = "<group>"; };
+		3F96C30C1E44D582005D2829 /* TipViewCobtroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewCobtroller.swift; sourceTree = "<group>"; };
+		3F96C3111E44D824005D2829 /* RealmReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmReader.swift; sourceTree = "<group>"; };
 		3FA5EEBC1E3CB5380094DE0A /* Charts-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Charts-master"; path = "../../Downloads/Charts-master"; sourceTree = "<group>"; };
 		3FA5EEBE1E3CB54D0094DE0A /* ChartsDemo-OSX */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "ChartsDemo-OSX"; path = "../../Downloads/Charts-master/ChartsDemo-OSX"; sourceTree = "<group>"; };
 		3FA5EEC01E3CB5F60094DE0A /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		3FD8317E1E43762D008B0395 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		3FD831821E437664008B0395 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
-		3FE8AC661E3CE1C90062A47B /* UserDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataController.swift; sourceTree = "<group>"; };
 		3FEC86661E05C61500C2886F /* WheatHerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheatHerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEC86691E05C61500C2886F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FEC866B1E05C61500C2886F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,9 +154,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FD8317F1E43762D008B0395 /* Realm.framework in Frameworks */,
+				3F2D4A051E43862600458439 /* Realm.framework in Frameworks */,
 				3FA5EECC1E3CB60B0094DE0A /* Charts.framework in Frameworks */,
-				3FD831831E437664008B0395 /* RealmSwift.framework in Frameworks */,
+				3F2D4A071E43862600458439 /* RealmSwift.framework in Frameworks */,
 				3F3321691E340C29003D5855 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +276,8 @@
 				3FE2F5A61E19BDCA005F1B2C /* WeatherController.swift */,
 				3F6E2A1B1E3E92DB0035AF3D /* ChartManagerController.swift */,
 				3F2D49ED1E437ED800458439 /* UserController.swift */,
+				3F96C3091E44C12F005D2829 /* DeatiledController.swift */,
+				3F96C30C1E44D582005D2829 /* TipViewCobtroller.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -303,6 +326,7 @@
 				3FFBE9A41E20F124009373BA /* CacheManager.swift */,
 				3FF66B7E1E312D40001AC49D /* Backgroundmanager.swift */,
 				3F2D49EB1E437E8B00458439 /* RealmWriter.swift */,
+				3F96C3111E44D824005D2829 /* RealmReader.swift */,
 			);
 			name = LogicModels;
 			sourceTree = "<group>";
@@ -333,6 +357,7 @@
 				3FEC86621E05C61500C2886F /* Sources */,
 				3FEC86631E05C61500C2886F /* Frameworks */,
 				3FEC86641E05C61500C2886F /* Resources */,
+				3F2D4A091E43862600458439 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -488,7 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE8AC671E3CE1C90062A47B /* UserDataController.swift in Sources */,
+				3F96C3121E44D824005D2829 /* RealmReader.swift in Sources */,
 				3FFBE9A11E1C0CE0009373BA /* CustomTableViewController.swift in Sources */,
 				3F4B61811E10340700D6C0E2 /* JSONDeliverer.swift in Sources */,
 				3F2D49E71E437E6D00458439 /* RealmModels.swift in Sources */,
@@ -509,6 +534,8 @@
 				3F2D49EE1E437ED800458439 /* UserController.swift in Sources */,
 				3FEC86A61E05E8EE00C2886F /* WeekDaysEnum.swift in Sources */,
 				3FEC86B71E09B68100C2886F /* JSONCustomParser.swift in Sources */,
+				3F96C30D1E44D582005D2829 /* TipViewCobtroller.swift in Sources */,
+				3F96C30A1E44C12F005D2829 /* DeatiledController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

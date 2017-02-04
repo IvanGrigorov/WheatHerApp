@@ -205,6 +205,7 @@ final class JSONCustomPaser : PMappingDataJSONToModel {
                 predictionExpectation: String(forecast["precipProbability"]  as! Double),
                 apparentTemp: String(forecast["apparentTemperatureMax"] as! Double),
                 day: dateAsDayTimeFormatter.string(from: date),
+
                 date: dateAsYearTimeFormatter.string(from: date),
                 temp: String(forecast["apparentTemperatureMin"] as! Double)))
         }

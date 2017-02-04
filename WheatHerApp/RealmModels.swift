@@ -13,7 +13,7 @@ import RealmSwift
 class User: Object {
     
     var name: String? = nil
-    var age: Int? = nil
+    var age   = 0
     var clothingStyle: String? = nil
     
 }
